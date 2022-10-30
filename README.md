@@ -11,13 +11,16 @@ Beissinger et al., (2018) <doi:10.1534/genetics.118.300857>
 
 ## Authors
 
-### Medhat Mahmoud*, ‡, Mila Tost*, ‡, Ngoc-Thuy Ha †, Henner Simianer †, ‡, and Timothy Beissinger*, ‡,1 
+### Medhat Mahmoud*, ‡,§, Mila Tost*, ‡, Ngoc-Thuy Ha †, Henner Simianer †, ‡, and Timothy Beissinger*, ‡,1 
 
 #### *Department of Crop Science, University of Goettingen, Goettingen, Germany 
 
 #### †Department of Animal Sciences, University of Goettingen, Goettingen, Germany 
 
-#### ‡Center for Integrated Breeding Research, University of Goettingen, Goettingen, Germany 
+#### ‡Center for Integrated Breeding Research, University of Goettingen, Goettingen, Germany
+
+#### §Creator
+#### 1Maintainer
 
 
 ## Installation
