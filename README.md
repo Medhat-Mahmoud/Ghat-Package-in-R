@@ -8,6 +8,18 @@ to test for selection on a trait. The package provides a number of simple exampl
 for handling and analysing the genome data and visualising the output and results.
 Beissinger et al., (2018) <doi:10.1534/genetics.118.300857>
 
+
+## Authors
+
+### Medhat Mahmoud*, ‡, Mila Tost*, ‡, Ngoc-Thuy Ha †, Henner Simianer †, ‡, and Timothy Beissinger*, ‡,1 
+
+#### *Department of Crop Science, University of Goettingen, Goettingen, Germany 
+
+#### †Department of Animal Sciences, University of Goettingen, Goettingen, Germany 
+
+#### ‡Center for Integrated Breeding Research, University of Goettingen, Goettingen, Germany 
+
+
 ## Installation
 
 ### Latest development build
