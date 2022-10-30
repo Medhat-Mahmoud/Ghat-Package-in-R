@@ -1,0 +1,7 @@
+
+
+
+
+
+remotes::install_github('https://github.com/Medhat86/Ghat')
+library(Ghat)
