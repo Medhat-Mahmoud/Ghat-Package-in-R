@@ -42,7 +42,7 @@ message (c(result.adf$Ghat , result.adf$Cor , result.adf$p.va))
 ```
 
 ### Example-2 Both SNP effects and change in allele frequency are known
-#### step 1: Run rrBLUP and estimating allels effects
+#### Step 1: Run rrBLUP and estimating allels effects
 
 ```r
 library(Ghat)
@@ -60,7 +60,7 @@ result              <- mixed.solve(phe[,2],
                                    method="ML")
 ``` 
                        
-#### step 2: Is to calculate the allele frequency at Cycle 1 and 3 
+#### Step 2: Is to calculate the allele frequency at Cycle 1 and 3 
 
 ```r  
 CycleIndicator      <- as.numeric(unlist(strsplit(gen$X,
@@ -77,7 +77,7 @@ names(frequencies)  <- c("Cycle1","Cycle3")
 change<-frequencies$Cycle3-frequencies$Cycle1
 ```
 
-#### step 3: Calculate LD Decay 
+#### Step 3: Calculate LD Decay 
 
 ```r
 ld                  <- ld_decay (gen=gen, map=map,
@@ -85,7 +85,7 @@ ld                  <- ld_decay (gen=gen, map=map,
                                  cores=1, max_r2=0.03)
 ```
 
-#### step 4: Calculate Ghat
+#### Step 4: Calculate Ghat
 
 ```r
 Ghat.adf    <- Ghat(effects=result$u, change=change, method = "scale",
