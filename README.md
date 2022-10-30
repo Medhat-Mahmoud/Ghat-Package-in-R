@@ -30,6 +30,57 @@ install.packages("Ghat")
 ## Documentation and examples
 
 #Example-2 Both SNP effects and change in allele frequency are known
+Quantifying evolution and selection on complex traits
+Description
+G-hat: R function to estimate G-hat from allele frequency and effect size data.
+
+Usage
+Ghat(effects = effects, change = change, method = "scale",
+  perms = 1000, plot = "Both", blockSize = 1000, num_eff = NULL)
+Arguments
+effects	
+Vector of allele effects.
+
+change	
+Vector of changes in allele frequency (could be positive, negative or zero).
+
+method	
+"vanilla" (assumes complete linkage equilibrium between markers), "trim" (excludes markers to approximate linkage equilibrium some of the extreme values) or "scale" (scales results to reflect underlying levels of linkage LD)
+
+perms	
+Number of permutations to run.
+
+plot	
+"Ghat", "Cor", or "Both", Should a plot of the Ghat or correlation test be returned?
+
+blockSize	
+How large should blocks for trimming be? Only required if method = "trim".
+
+num_eff	
+The effective number of independent markers, to be used only in conjunction with the “scale” method, above (see “ld_decay” function or use help (?ld_decay).
+
+Value
+Ghat Ghat-value
+
+Cor Correlation between alleles frequencies and their effects
+
+p.val two-sided P-value of Evidence of selection
+
+plot relationship between estimated allelic effects at individual SNPs and the change in allele frequency over generations
+
+Examples
+Run examples
+
+#Example-1 Both SNP effects and change in allele frequency are known
+maize		<- Maize_wqs[[1]]
+result.adf	<- Ghat(effects =maize[,1], change=maize[,2], method="scale",
+                     perms=1000, plot="Ghat", num_eff=54.74819)
+mtext(paste("WQS ADF test for selection, pval = ", round(result.adf$p.val,4)))
+message (c(result.adf$Ghat , result.adf$Cor , result.adf$p.va))
+
+
+
+#Example-2 Both SNP effects and change in allele frequency are known
 ##################################################################
 ## step 1: #run rrBLUP and estimating allels effects            ##
 ##################################################################
