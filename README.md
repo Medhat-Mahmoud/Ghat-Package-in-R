@@ -29,7 +29,7 @@ install.packages("Ghat")
 
 ## Documentation and examples
 
-Please visit [https://strengejacke.github.io/sjPlot/](https://cran.r-project.org/web/packages/Ghat/Ghat.pdf) for documentation and examples.
+Please visit [https://github.com/Medhat86/Ghat](https://cran.r-project.org/web/packages/Ghat/Ghat.pdf) for documentation and examples.
 
 ## Citation
 
