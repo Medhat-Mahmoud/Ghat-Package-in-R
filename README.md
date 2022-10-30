@@ -1,4 +1,4 @@
-# Ghat <img src="https://github.com/Medhat86/Ghat/blob/master/1649142570895.jpg" align="right" alt="" width="120" />
+# Ghat <img src="https://github.com/Medhat86/Ghat/blob/master/GOE_Logo_Quer_IPC_Farbe_RGB.png" />
 
 
 Functions are provided for quantifying evolution and selection on complex traits.
