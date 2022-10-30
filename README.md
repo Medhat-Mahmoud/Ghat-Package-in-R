@@ -42,7 +42,7 @@ message (c(result.adf$Ghat , result.adf$Cor , result.adf$p.va))
 ```
 
 ### Example-2 Both SNP effects and change in allele frequency are known
-#### step 1: #run rrBLUP and estimating allels effects
+#### step 1: Run rrBLUP and estimating allels effects
 
 ```r
 library(Ghat)
@@ -58,12 +58,11 @@ result              <- mixed.solve(phe[,2],
                                    X= model.matrix(phe[,2]~phe[,3]),
                                    K=NULL, SE=FALSE, return.Hinv=FALSE,
                                    method="ML")
-```                                   
-                                   
-                                   
-##################################################################
-## step 2: is to calculate the allele frequency at Cycle 1 and 3##
-##################################################################
+``` 
+                       
+#### step 2: Is to calculate the allele frequency at Cycle 1 and 3 
+
+```r  
 CycleIndicator      <- as.numeric(unlist(strsplit(gen$X,
                        split="_C")) [seq(2,2*nrow(gen),2)])
 Cycle1              <- gen[which(CycleIndicator == 1),]
@@ -76,23 +75,26 @@ for(i in 1:2){
 frequencies         <- as.data.frame(frequencies)
 names(frequencies)  <- c("Cycle1","Cycle3")
 change<-frequencies$Cycle3-frequencies$Cycle1
+```
 
-################################################################
-## step 3: Calculate LD Decay                                   ##
-################################################################
+#### step 3: Calculate LD Decay 
+
+```r
 ld                  <- ld_decay (gen=gen, map=map,
                                  max_win_snp=2000, max.chr=10,
                                  cores=1, max_r2=0.03)
+```
 
-##################################################################
-## step 4: Calculate Ghat                                       ##
-##################################################################
+#### step 4: Calculate Ghat
+
+```r
 Ghat.adf    <- Ghat(effects=result$u, change=change, method = "scale",
                     perms=1000,plot="Ghat", num_eff = 54.74819)
 
 message (paste("Ghat=" , Ghat.adf$Ghat,
             "Cor="  , Ghat.adf$Cor ,
             "P-val=", Ghat.adf$p.va, sep = " "))
+```
 
 Please visit [https://github.com/Medhat86/Ghat](https://cran.r-project.org/web/packages/Ghat/Ghat.pdf) for documentation and examples.
 
