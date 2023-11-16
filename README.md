@@ -91,7 +91,7 @@ for(i in 1:2){
 }
 frequencies         <- as.data.frame(frequencies)
 names(frequencies)  <- c("Cycle1","Cycle3")
-change<-frequencies$Cycle3-frequencies$Cycle1
+change              <-frequencies$Cycle3-frequencies$Cycle1
 ```
 
 #### Step 3: Calculate LD Decay 
@@ -105,7 +105,7 @@ ld                  <- ld_decay (gen=gen, map=map,
 #### Step 4: Calculate Ghat
 
 ```r
-Ghat.adf    <- Ghat(effects=result$u, change=change, method = "scale",
+Ghat.adf            <- Ghat(effects=result$u, change=change, method = "scale",
                     perms=1000,plot="Ghat", num_eff = 54.74819)
 
 message (paste("Ghat=" , Ghat.adf$Ghat,
