@@ -8,7 +8,7 @@ The package implements effective handling and analysis algorithms scaled for
 genome-wide data and calculates a composite statistic, denoted Ghat, which is used
 to test for selection on a trait. The package provides a number of simple examples
 for handling and analysing the genome data and visualising the output and results.
-Beissinger et al., (2018) <doi:10.1534/genetics.118.300857>
+Mahmoud et al., (2022) ([https://academic.oup.com/g3journal/article/13/2/jkac319/6858947])
 
 
 ## Authors
